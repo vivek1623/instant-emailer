@@ -11,10 +11,10 @@ router.get("/auth/google",
 
 router.get('/auth/google/callback', passport.authenticate('google'), (req, res) => {
   // Successful authentication, redirect home.
-  res.redirect('/user');
+  res.redirect('/api/user');
 })
 
-router.get('/user', (req, res) => {
+router.get('/api/user', (req, res) => {
   res.send(req.user)
 })
 
