@@ -28,16 +28,10 @@ passport.use(new GoogleStrategy({
 }, async (authToken, refreshToken, profile, next) => {
   try {
     const user = await User.findOne({ googleId: profile.id })
-    if (!user) {
-      const newUser = new User({
-        googleId: profile.id,
-        name: profile.displayName
-      })
-      newUser.save()
-      next(null, newUser)
-    } else {
-      next(null, user)
-    }
+    if (user)
+      return next(null, user)
+    const newUser = new User({ googleId: profile.id, name: profile.displayName }).save()
+    next(null, newUser)
   } catch (e) {
     // next(e, null)
   }

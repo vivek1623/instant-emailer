@@ -11,7 +11,7 @@ router.get("/auth/google",
 
 router.get('/auth/google/callback', passport.authenticate('google'), (req, res) => {
   // Successful authentication, redirect home.
-  res.redirect('/api/user');
+  res.redirect('/surveys');
 })
 
 router.get('/api/user', (req, res) => {
@@ -20,7 +20,7 @@ router.get('/api/user', (req, res) => {
 
 router.get('/auth/logout', (req, res) => {
   req.logout()
-  res.send(req.user)
+  res.redirect('/')
 })
 
 module.exports = router

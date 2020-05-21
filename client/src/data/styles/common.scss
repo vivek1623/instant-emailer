@@ -1,0 +1,113 @@
+@import "./colors.scss";
+@import "./variables.scss";
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-family-primary !important;
+    max-width: 100vw;
+    overflow-x: hidden;
+    color: $font-color !important;
+    font-size: 14px !important;
+    font-size: 1.4rem !important; //1.4rem with 62.5% font-size = 14px
+    background-color: $default !important;
+
+    p, h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0px;
+        color: $font-color;
+    }
+}
+
+.ie-full-parent-height {
+    height: 100%;
+}
+
+.ie-full-width {
+    width: 100%;
+}
+
+.ie-fixed {
+  position: fixed;
+}
+
+.ie-align-full {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.ie-font-md {
+  font-size: $font-size-md;
+}
+
+//---------------------- flex css --------------------------
+.ie-flex {
+    display: flex;
+}
+
+.ie-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.ie-flex-no-wrap {
+    flex-wrap: nowrap;
+}
+
+.ie-flex-row {
+    display: flex !important;
+    flex-direction: row;
+}
+
+.ie-flex-rr {
+    display: flex !important;
+    flex-direction: row-reverse;
+}
+
+.ie-flex-column {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.ie-flex-cr {
+    display: flex !important;
+    flex-direction: column-reverse;
+}
+
+.ie-flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.ie-flex-ac { //flex-align-center
+    align-items: center;
+}
+
+.ie-flex-jc { //flex-justify-center
+    justify-content: center;
+}
+
+.ie-flex-jsb { //flex-justify-space-between
+    justify-content: space-between;
+}
+
+.ie-flex-jsa { //flex-justify-space-around
+    justify-content: space-around;
+}
+
+.ie-flex-jfe { //flex-justify-flex-end
+    justify-content: flex-end;
+}
+
+.ie-full-flex {
+    flex: 1;
+}
+
+.ie-flex-none {
+    flex: none;
+}
+
+//--------------------- end flex css -----------------------
